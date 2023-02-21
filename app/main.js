@@ -4,13 +4,13 @@ barcodeApp.config(function($stateProvider, $urlRouterProvider) {
   $stateProvider 
   .state("home", {
     url: "/",
-    templateUrl : "../view/generatebarcode.html",
+    templateUrl : "https://github.com/karthikn45/BarcodeApp/blob/view/generatebarcode.html",
     controller : "barCodeCtrl"
   })
 
   .state("trackingEntryForm", {
     url: "/trackingEntryForm/:id/:edit",
-    templateUrl : "../view/trackingEntryForm.html",
+    templateUrl : "https://github.com/karthikn45/BarcodeApp/blob/view/trackingEntryForm.html",
     controller : "trackingEntryCtrl"
   })
 
