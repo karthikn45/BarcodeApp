@@ -23,7 +23,7 @@ barcodeApp.controller("barCodeCtrl",['$scope','$firebaseArray','$stateParams',"$
           id = crypto.randomUUID();
           $scope.id =id;
           console.log(id);
-          myUrl="http://localhost:5000/#/trackingEntryForm/"+id;
+          myUrl="https://karthikn45.github.io/BarcodeApp/"+id;
           content2.style.display="block";
           document.getElementById('qrcode').innerHTML="";
           qrCodeGenerater(); 
@@ -42,7 +42,7 @@ barcodeApp.controller("barCodeCtrl",['$scope','$firebaseArray','$stateParams',"$
             if(myUrl.includes(e.key)&&!(input[0]===document.activeElement) && !(input[1]===document.activeElement) && !(input[2]===document.activeElement)){
               url += e.key;
               if(url.length >= 78 && url.length <= 78 && url.startsWith("http://")){
-                $window.location.href = url+"/"+($window.location.href=="http://localhost:5000/#/"); 
+                $window.location.href = url+"/"+($window.location.href=="https://karthikn45.github.io/BarcodeApp/"); 
               }
             }
   
@@ -63,7 +63,7 @@ barcodeApp.controller("barCodeCtrl",['$scope','$firebaseArray','$stateParams',"$
       function qrCodeGenerater(){
         try{
         var qrcode= new QRCode(document.querySelector("#qrcode"), {
-          text: "http://localhost:5000/#/trackingEntryForm/"+id + "/"+ false,
+          text: "https://karthikn45.github.io/BarcodeApp/"+id + "/"+ false,
           width: 150, 
           height: 150,
           colorDark : "#000000",
