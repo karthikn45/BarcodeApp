@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="./img/icon.png" type="image/icon">
+  <title>Bar Code Generator</title>
+  <!--  https://barcode-app-5ba85.web.app -->
+  <!-- CSS link -->
+  <link rel="stylesheet" href="./style/style.css">
+    
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="./app/cdn-files/materialize.min.css">
+  <!-- Material icons -->
+  <link rel="stylesheet" href="./app/cdn-files/material-icons.css">
+  <!-- AngularJS -->
+  <script src="./app/cdn-files/angular.min.js"></script>
+  
+ <!-- ngStorage -->
+ <script type="text/javascript" src="./app/cdn-files/ngStorage.min.js"></script>
+ <!-- Firebase -->
+ <script src="./app/cdn-files/firebase.js"></script>
+ <!-- AngularFire -->
+ <script src="./app/cdn-files/angularFire.min.js"></script>
+ <!-- QR code -->
+ <script src="./app/cdn-files/qrcode.min.js"></script>
+ <!--ui.router CDN  -->
+ <script src = "./app/cdn-files/angular-ui-router.min.js"></script>
+</head>
+<body ng-app="barcodeApp" >
+
+<!-- Navbar --> 
+<div ui-view></div>
+
+<script>
+var config = {
+  apiKey: "AIzaSyBxLt6RnmbHs5dU_60Py7czrOjIRQQ1Zn8",
+  authDomain: "barcode-app-5ba85.firebaseapp.com",
+  databaseURL: "https://barcode-app-5ba85-default-rtdb.firebaseio.com",
+  projectId: "barcode-app-5ba85",
+  storageBucket: "barcode-app-5ba85.appspot.com",
+  messagingSenderId: "105143302492",
+  appId: "1:105143302492:web:9db40cdca8192fdca82999",
+  measurementId: "G-T7TSSHMR3C"
+};
+firebase.initializeApp(config);
+</script>
+
+<!-- Script file -->
+  <script src="./app/main.js"></script>
+  <script src="./app/barcodeCtrl.js"></script>
+  <script src="./app/navCtrl.js"></script>
+  <script src="./app/dateFormat_service.js"></script>
+  <script src="./app/TrackingEntryFormCtrl.js"></script>
+</body>
+</html>

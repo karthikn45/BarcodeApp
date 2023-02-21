@@ -1,0 +1,194 @@
+.noPaddingNoMargin{
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.noMarginTop{
+    margin-top: 0 !important;
+}
+.noPaddingBottom{
+    padding-bottom: 0px !important;
+}
+.noPadding{
+    padding: 0px !important;
+}
+
+body{
+    background-color: rgb(247, 237, 237) !important;
+}
+body::-webkit-scrollbar{
+    display: none;
+}
+
+.navContent{
+    background-color: #fdcca4;
+    border-radius: 0 0 5px 5px;
+}
+.sticky {
+    position: sticky;
+  }
+.icon{
+    width: 80px;
+    height: 80px;
+    margin-left: 15% !important;
+}
+
+.navContent{
+    font-weight: 600;
+}
+.navHeading{
+    color: black;
+    font-size: 24px;
+    font-weight: 600;
+    margin-right: 15% !important;
+}
+@media only screen and (max-width: 420px) {
+    .navHeading {
+        font-size: 12px !important;
+    }
+  }
+
+.uuidRow{
+    margin-top: 60px !important;
+}
+
+.uuidTextBox{
+    width: 100% !important;
+    border: 1px solid #bebaba !important;
+    height: 2.2rem !important;
+    font-size: 16px;
+    text-indent: 15px; 
+    box-shadow: none !important;
+    margin-bottom: 40px !important; 
+}
+
+
+.generateBtn, .barCodeBtn{
+    text-transform: none !important;
+    background-color: #4682B4 !important;
+    height: 2.2rem !important;
+    width: 150px !important;
+}
+.printbtn{
+    text-transform: none !important;
+    background-color: #4682B4 !important;
+    height: 2.2rem !important;
+    width: 200px !important;    
+}
+
+.stateTextBox, .countryTextBox, .statusSelectBox{
+    width: 100% !important;
+    border: 1px solid #bebaba !important;
+    height: 2.2rem !important;
+    font-size: 16px;
+    text-indent: 15px; 
+    border-radius: 10px !important;
+    background-color:rgb(247, 237, 237) !important ;
+    box-shadow: none !important; 
+}
+
+.uuidTextBox:focus, 
+.stateTextBox:focus,
+.countryTextBox:focus,
+.statusSelectBox:focus{
+    border-color: black !important;
+    outline: none !important;
+}
+
+.input-width, .input-height{
+    width: 100% !important;
+    border: 1px solid #bebaba !important;
+    height: 2.2rem !important;
+    font-size: 12px;    
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Tracking Details Form */
+
+.trackingIdBox, 
+.trackingRemarksBox, 
+.trackingStatusBox, 
+.trackingLocationBox{
+    width: 100% !important;
+    border: 1px solid #bebaba !important;
+    height: 2.2rem !important;
+    font-size: 16px;
+    text-indent: 15px; 
+    box-shadow: none !important; 
+}
+.uuidTextBox:focus, 
+.trackingStatusBox:focus,
+.trackingRemarksBox:focus,
+.trackingLocationBox:focus{
+    border-color: black !important;
+    outline: none !important;
+}
+.trackingEntryFormCard{
+    margin-top: 50px !important;
+    border-radius: 10px !important;
+}
+
+.trackingIdRow{
+    margin-top: 50px !important;
+}
+.addFormBtn{
+    background-color: #4682B4 !important;
+}
+.formSubmitBtn{
+    background-color: #4682B4 !important;
+}
+
+/* Tracking Information Form */
+.idFetchBox{
+    width: 100% !important;
+    border: 1px solid #e8e2e2 !important;
+    height: 2.2rem !important;
+    font-size: 16px;
+    text-indent: 15px; 
+    box-shadow: none !important;   
+}
+
+
+ul.track li {
+    position:relative; 
+    margin-bottom: 0; 
+    padding-bottom: 2.5em;
+}
+
+ul.track li:after {
+    content: "\2713";
+    color: white;
+    font-size: 15px !important;
+    border: 1px solid rgb(14, 172, 14);
+    padding: 1px 5px !important;
+    background-color: green;
+    position: absolute;
+    left: -27px; 
+    top: -2px;
+}
+
+ul.track li:before {
+    content:"";
+    position: absolute;
+    left: -18px !important; 
+    border: 3px solid #4682B4 !important;
+    height: 100%;
+    width: 1px;
+}
+
+ul.track li:first-child:before {
+   top: 6px !important; 
+}
+
+ul.track li:last-child:before {
+   height: 6px !important;
+}
+.trackView{
+    padding-left: 5px !important; 
+}
+
+

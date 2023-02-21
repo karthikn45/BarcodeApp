@@ -1,0 +1,72 @@
+<nav class="navContent sticky" >
+  <div class="nav-wrapper">
+    <a class="navbar-logo" href="#"><img src="img/icon.png" alt="logo" class="icon"/></a>
+    <a class="navHeading right hide-on-med-and-down">Bar Code Generator</a>
+  </div>
+ </nav>
+<!-- UUID textbox -->
+<div class="row noPaddingNoMargin generateBarCodeForm" >
+    <div class="col l6 s10 offset-s1 offset-l3">
+    
+      <div class="row uuidRow noPaddingNoMargin" >
+        <!-- content1 -->
+        <div class="col s7 l9 noPadding">
+          <input type="text" class="uuidTextBox " name="uuid" id="uuid" placeholder="UUID" ng-model="id" readonly>
+        </div>
+        <div class="col s5 l3">
+          <button class="btn generateBtn col s12" ng-click="uuid()" ><span>Generate UUID</span></button>
+        </div>
+        <!-- content2 -->
+        <div class="content2" hidden>
+        <div class="row">
+          <div class="col s6">
+            <input type="text" name="state" id="state" placeholder="state" class="stateTextBox" ng-model="user.state">
+          </div>
+          <div class="col s6">
+            <input type="text" name="country" id="country" placeholder="country"  class="countryTextBox"  ng-model="user.country">
+          </div>
+        </div>
+        <div class="row ">
+          <div class="input-field col s12 ">
+            <select class="browser-default statusSelectBox noPaddingNoMargin" ng-model="user.status">
+              <option value="" disabled selected></option>
+              <option value="Ordered">Order</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s6 m5 l4 offset-m3 offset-s3 offset-l4">
+            <button class="btn barCodeBtn col s12" ng-click="barcodeInfo()"><span>Generate BarCode</span></button>
+          </div>
+        </div>
+      </div>
+    </div>
+      <!-- content3 -->
+      <div class="content3" hidden>
+      <div class="row">
+        <div class="col s6 m4 l4 offset-s3 offset-m3 offset-l4">
+          <div class="qr-code" id="qrcode" ng-bind-html="qrcode"></div>
+        </div>
+      </div>
+      
+    
+      <div class="row">
+        <div class="col s3 m2 l2 offset-s2 offset-m3 offset-l3">
+          <input type="number"  class="input-width" value="24">
+        </div>
+        <div class="col s1 center">
+          <span>x</span>
+        </div>
+        <div class="col s3 m2 l2">
+          <input type="number"  class="input-height" value="24">
+        </div>
+          
+      </div>
+      <div class="row">
+        <div class="col s8 m6 l4 offset-s2 offset-m3 offset-l4">
+          <button ng-click="printToCart('qrcode')" class="button btn printbtn col s12">Print</button>
+        </div>
+      </div>
+    </div>
+    </div>
+   </div>

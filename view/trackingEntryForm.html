@@ -1,0 +1,124 @@
+<nav class="navContent sticky">
+    <div class="nav-wrapper">
+      <a class="navbar-logo" href="#"><img src="img/icon.png" alt="logo" class="icon"/></a>
+    <a class="navHeading right">Bar Code Generator</a>
+    </div>
+</nav>
+
+   <div class="trackingInformation">
+    <div class="row noPaddingNoMargin">
+        <div class="col s10 m8 l6 offset-s1 offset-m2 offset-l3">
+            <div class="row noPaddingNoMargin">
+                <div class="col s12">
+                    <h4>Trcking Information</h4>
+                    <h5>Tracking ID : {{id}}</h5>
+                    <div class="row noPaddingNoMargin">
+                        <div class="col s10 offset-s1">
+                            <ul  class="track" >
+                                <li ng-repeat="data in info">
+                                    <strong class="statusTrackView trackView"></strong>
+                                    <strong ng-bind="time(data.date.substring(16,data.date.lastIndexOf(':')))"></strong>
+                                    <strong class="statusTrackView trackView">{{data.status}}</strong>
+                                    <span class="stateTrackView trackView">{{data.state}}</span>
+                                    <span class="countryTrackView trackView">{{data.country}}</span>
+                                    <span class="locationTrackView trackView">{{data.location}}</span> 
+                                    <span class="remarkTrackView trackView">{{data.remark}}</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col s6 offset-s3">
+            <div class="row">
+                <div class="col s10 offset-s1">
+                    <button class="btn addFormBtn" ng-click="addEntryForm()" ng-show = "edit">Add<i class="material-icons right">add_circle_outline</i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+<div class="row trackingForm" hidden>
+    <div class="col s10 m8 l6 offset-s1 offset-m2 offset-l3">
+        <div class="card trackingEntryFormCard ">
+            <div class="row">
+                <div class="col s10 offset-s1">
+                    <form>
+                        <div class="row">
+                            <div class="col s12">
+                                <div class="row trackingIdRow">
+                                    <div class="col s3">
+                                        <span for="uuid">UUID</span>
+                                    </div>
+                                    <div class="col s9">
+                                        <input placeholder="UUID" id="uuid" type="text" ng-model="id" class="trackingIdBox readonly">
+                                    </div>
+                                </div>       
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col s12">
+                                <div class="row">
+                                    <div class="col s3">
+                                        <span for="uuid">Remarks</span>
+                                    </div>
+                                    <div class="col s9">
+                                        <input placeholder="Remarks" id="remarks" type="text" class="trackingRemarksBox" ng-model="remarks">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col s12">
+                                <div class="row">
+                                    <div class="col s3">
+                                        <span for="uuid">Status</span>
+                                    </div>
+                                    <div class="col s9 input-field noMarginTop">
+                                        <select class="browser-default trackingStatus trackingStatusBox" ng-model="status">
+                                            <option value="" disabled selected></option>
+                                            <option value="Ordered">Ordered</option>
+                                            <option value="Packed">Packed</option>
+                                            <option value="Dispatched">Dispatched</option>
+                                            <option value="Out For Delivery">Out For Delivery</option>
+                                            <option value="Delivered">Delivered</option>
+                                          </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col s12">
+                                <div class="row">
+                                    <div class="col s3">
+                                        <span for="uuid">Location</span>
+                                    </div>
+                                    <div class="col s9">
+                                        <input placeholder="Location" id="Location" type="text" class="trackingLocationBox" ng-model="location">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col s4 m2 l2">
+                                <button type="submit" class="btn formSubmitBtn" ng-click="trackingInfo()">Submit</button>
+                            </div>
+                            <div class="col s4 m2 l2 offset-s1 offset-m1 offset-l1">
+                                <button type="submit" class="btn red formHideBtn" ng-click="formHide()">Cancel</button>
+                            </div>
+
+                        </div>
+                </form>
+                </div>
+            </div>
+    </div>
+</div>
